@@ -1,0 +1,13 @@
+<div class="container w-80">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-3">
+        <%= link_to cocktail_path(cocktail.id) do %>
+          <div class="cocktail-card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.mccourier.com/wp-content/uploads/2021/01/Drinks.jpg)">
+            <h2><%= cocktail.name %></h2>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar.navbar-dark.bg-dark {
+  height: 80px;
+}
+
+body {
+  background-image: linear-gradient(rgba(173, 173, 173, 0.01), rgba(172, 172, 172, 0.1)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrNWDaAF0aZ2paXKnxTGTj4K_4YGVidFulkA&usqp=CAU);
+  background-size: 50%;
+}

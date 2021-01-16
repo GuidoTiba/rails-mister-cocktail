@@ -1,0 +1,7 @@
+<div class="container w-50 mt-3">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit :Add! %>
+  <% end %>
+</div>

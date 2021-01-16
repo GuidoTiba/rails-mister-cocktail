@@ -13,6 +13,12 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <%= link_to "Los tragos de Nati y Guido", cocktails_path, class:"navbar-brand" %>
+      <%= link_to "Add a Cocktail", new_cocktail_path, class:"navbar-brand btn btn-outline-danger" %>
+    </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

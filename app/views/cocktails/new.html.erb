@@ -1,0 +1,8 @@
+<div class="container w-50 mt-3">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description, as: :text %>
+    <%= f.submit :Create!, class:"btn btn-primary w-100 mt-2" %>
+  <% end %>
+</div>
+
