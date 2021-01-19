@@ -5,16 +5,17 @@
 </div>
 <div class="container mt-3">
   <div class="row">
-    <div class="col-8">
+    <div class="col-7 mr-3 p-3" style="background:#2CC0BB; box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2); border: 1px solid black">
       <h2>Description</h2>
       <p><%= @cocktail.description %></p>
     </div>
-    <div class="col-4">
+    <div class="col-4 p-3" style="background:#2CC0BB; box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2); border: 1px solid black">
       <h2>Ingredients</h2>
       <ul>
         <% @cocktail.doses.each do |dose| %>
-          <li><strong><%= dose.ingredient.name %></strong> <%= dose.description %></li>
-          <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }  %>
+          <li><%= dose.description %> <strong><%= dose.ingredient.name %></strong> 
+          <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-outline-danger" %>
+          </li>
         <% end %>
       </ul>
       <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class:"btn btn-success" %>
