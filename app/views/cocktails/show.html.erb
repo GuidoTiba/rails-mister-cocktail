@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.mccourier.com/wp-content/uploads/2021/01/Drinks.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @cocktail.photo.key %>');">
   <div class="container">
     <h1><%= @cocktail.name %></h1>
   </div>
@@ -18,7 +18,7 @@
           </li>
         <% end %>
       </ul>
-      <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class:"btn btn-success" %>
+      <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class:"btn btn-success w-100" %>
     </div>
   </div>
 </div>
