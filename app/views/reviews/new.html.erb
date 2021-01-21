@@ -1,0 +1,7 @@
+<div class="container w-50 mt-3">
+  <%= simple_form_for [@cocktail, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating, collection: 1..5 %>
+    <%= f.submit :Send!, class: "btn btn-primary rounded w-100 mt-3" %>
+  <% end %>
+</div>
